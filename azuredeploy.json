@@ -516,7 +516,7 @@
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
           },
           "virtualNetworkExistingRGName": {
-               "value": "[variables('rgname')]"
+               "value": "[parameters('virtualNetworkRG')]"
           },
           "lbName": {
                "value": "[parameters('internalLoadBalancerName')]"
