@@ -23,6 +23,13 @@
         "description": "Virtual Network Name"
       }
     },
+    "virtualNetworkRG": {
+      "type": "string",
+      "defaultValue": "vnet-FW",
+      "metadata": {
+        "description": "Virtual Network Resource Group"
+      }
+    },
     "virtualNetworkNewOrExisting": {
             "type": "string",
             "defaultValue": "new",
@@ -251,7 +258,7 @@
     "rgname" : "[resourceGroup().name]",
     "LoadBalancerType" : "layer-7",
     "firewallVmCount" : 2,
-    "baseUrl" : "https://raw.githubusercontent.com/PaloAltoNetworks/azure-applicationgateway/master/",
+    "baseUrl" : "https://github.com/albertacc/PAs-applicationgateway/master/",
     "nsgURL" : "[concat(variables('baseUrl'),'/nsg-new.json')]",
     "vnetURL" : "[concat(variables('baseUrl'),'/vnet-', parameters('virtualNetworkNewOrExisting'),'.json')]",
     "publicLBURL" : "[concat(variables('baseUrl'),'/public-lb-', variables('LoadBalancerType'), '.json')]",
@@ -398,7 +405,7 @@
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
           },
           "virtualNetworkExistingRGName": {
-               "value": "[variables('rgname')]"
+               "value": "[parameters('virtualNetworkRG')]"
           },
           "subnet0Name": {
                "value": "[parameters('MgmtSubnetName')]"
