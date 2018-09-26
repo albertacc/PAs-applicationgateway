@@ -480,6 +480,9 @@
           "vnetName": {
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
           },
+          "virtualNetworkExistingRGName": {
+               "value": "[parameters('virtualNetworkRG')]"
+          },
           "subnetName": {
                "value": "[parameters('appGatewaySubnetName')]"
           },
