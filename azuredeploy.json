@@ -140,11 +140,7 @@
     },
     "backendVmSize": {
        "type": "string",
-       "allowedValues": [
-          "Standard_A1",
-          "Standard_D1",
-          "Standard_D1_v2"
-       ],
+       "defaultValue": "Standard_B1s",
        "metadata": {
           "description": "Azure VM size for backend VMs.  Not all sizes are available in all regions."
        },
