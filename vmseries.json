@@ -314,7 +314,7 @@
       "dependsOn": [
         "SettingUpPublicIPsLoop",
         "NetworkInterfaceLoop",
-        "[concat('Microsoft.Compute/availabilitySets/', variables('availabilitySetName'))]"
+        "[parameters('AvSetName')]"
       ],
       "copy": {
           "name": "VirtualMachineLoop",
@@ -334,7 +334,7 @@
             "value": "[concat(parameters('vmName'), copyindex())]"
           },
           "availabilitySetName": {
-            "value": "[variables('availabilitySetName')]"
+            "value": "[parameters('AvSetName')]"
           },
           "imageSku": {
             "value": "[parameters('imageSku')]"
