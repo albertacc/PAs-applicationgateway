@@ -157,6 +157,13 @@
            "description": "byol = Bring Your Own License; bundle1 = Bundle 1 PAYG (Hourly); bundle2 = Bundle 2 PAYG (Hourly)"
        }
     },
+    "AvailSetName": {
+       "type": "string",
+       "metadata": {
+          "description": "Name prefix of Availability Set in the Azure portal"
+       },
+       "defaultValue": "VM-Series"
+    },
     "firewallVmName": {
        "type": "string",
        "metadata": {
@@ -386,6 +393,9 @@
           },
           "vmCount": {
                "value": "[variables('firewallVmCount')]"
+          },
+          "AvSetName": {
+               "value": "[parameters('AvailSetName')]"
           },
           "vmName": {
                "value": "[parameters('firewallVmName')]"
