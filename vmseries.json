@@ -16,6 +16,13 @@
        },
        "defaultValue": "VM-Series"
     },
+    "ltcount": {
+       "type": "int",
+       "metadata": {
+          "description": "Last Count of VM-Series VM in the Azure portal"
+       },
+       "defaultValue": "1"
+    },
     "vmName": {
        "type": "string",
        "metadata": {
@@ -331,7 +338,7 @@
             "value": "[variables('location')]"
           },
           "vmName": {
-            "value": "[concat(parameters('vmName'), copyindex())]"
+            "value": "[concat(parameters('vmName'), copyindex(parameters('ltcount')))]"
           },
           "availabilitySetName": {
             "value": "[parameters('AvSetName')]"

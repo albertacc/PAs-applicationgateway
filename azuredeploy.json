@@ -109,6 +109,13 @@
        },
        "defaultValue": "VM-Series"
     },
+    "lastCount": {
+       "type": "int",
+       "metadata": {
+          "description": "Last Count of VM-Series VM in the Azure portal"
+       },
+       "defaultValue": "1"
+    },
     "firewallVmName": {
        "type": "string",
        "metadata": {
@@ -326,6 +333,9 @@
           },
           "AvSetName": {
                "value": "[parameters('AvailSetName')]"
+          },
+          "ltcount": {
+               "value": "[parameters('lastCount')]"
           },
           "vmName": {
                "value": "[parameters('firewallVmName')]"
