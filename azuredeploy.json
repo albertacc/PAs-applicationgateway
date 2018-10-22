@@ -342,7 +342,7 @@
                "value": "[parameters('AvailSetName')]"
           },
           "ltcountPI": {
-               "value": "[parameters('lastCountPI]"
+               "value": "[parameters('lastCountPI')]"
           },
           "ltcount": {
                "value": "[parameters('lastCount')]"
