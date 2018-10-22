@@ -16,6 +16,13 @@
        },
        "defaultValue": "VM-Series"
     },
+    "ltcountPI": {
+       "type": "int",
+       "metadata": {
+          "description": "Last Count of Public IPs in the Azure portal"
+       },
+       "defaultValue": "1"
+    },
     "ltcount": {
        "type": "int",
        "metadata": {
@@ -255,7 +262,7 @@
             "value": "[variables('location')]"
           },
           "MgmtPublicIPAddressName": {
-            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex(parameters('ltcount')))]"
+            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex(parameters('ltcountPI')))]"
           },
           "publicIPAddressType": {
             "value": "[variables('publicIPAddressType')]"
@@ -306,7 +313,7 @@
             "value": "[parameters('virtualNetworkExistingRGName')]"
           },
           "MgmtPublicIPAddressName": {
-            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex(parameters('ltcount')))]"
+            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex(parameters('ltcountPI')))]"
           },
           "baseUrl": {
             "value": "[parameters('baseUrl')]"

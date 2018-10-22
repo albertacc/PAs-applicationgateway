@@ -109,6 +109,13 @@
        },
        "defaultValue": "VM-Series"
     },
+    "lastCountPI": {
+       "type": "int",
+       "metadata": {
+          "description": "Last Count of Public IPs in the Azure portal"
+       },
+       "defaultValue": "1"
+    },
     "lastCount": {
        "type": "int",
        "metadata": {
@@ -333,6 +340,9 @@
           },
           "AvSetName": {
                "value": "[parameters('AvailSetName')]"
+          },
+          "ltcountPI": {
+               "value": "[parameters('lastCountPI]"
           },
           "ltcount": {
                "value": "[parameters('lastCount')]"
