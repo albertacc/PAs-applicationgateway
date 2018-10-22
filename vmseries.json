@@ -255,7 +255,7 @@
             "value": "[variables('location')]"
           },
           "MgmtPublicIPAddressName": {
-            "value": "[concat(parameters('MgmtPublicIPAddressName'),copyindex())]"
+            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex(parameters('ltcount')))]"
           },
           "publicIPAddressType": {
             "value": "[variables('publicIPAddressType')]"
@@ -288,7 +288,7 @@
             "value": "[variables('location')]"
           },
           "nicName": {
-            "value": "[concat(variables('nicName'), copyindex())]"
+            "value": "[concat(variables('nicName'), copyindex(parameters('ltcount')))]"
           },
           "subnet0Name": {
             "value": "[parameters('subnet0Name')]"
@@ -306,7 +306,7 @@
             "value": "[parameters('virtualNetworkExistingRGName')]"
           },
           "MgmtPublicIPAddressName": {
-            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex())]"
+            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex(parameters('ltcount')))]"
           },
           "baseUrl": {
             "value": "[parameters('baseUrl')]"
@@ -353,7 +353,7 @@
             "value": "[variables('imagePublisher')]"
           },
           "nicName": {
-            "value": "[concat(variables('nicName'), copyindex())]"
+            "value": "[concat(variables('nicName'), copyindex(parameters('ltcount')))]"
           },
           "vmSize": {
             "value": "[parameters('vmSize')]"
